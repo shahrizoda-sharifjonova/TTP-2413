@@ -1,1 +1,50 @@
-// Шапка
+.header{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background: #78B9FF;
+    @include media(768){
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(768){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+    &__buttons{
+        display: flex;
+        align-items: stretch;
+        column-gap: 30px;
+        @include media(768){
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+    &__btn{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #FFBCF0;
+        border-radius: 18px;
+        width: 180px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
