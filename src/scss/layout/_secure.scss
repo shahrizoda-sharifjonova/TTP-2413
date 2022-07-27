@@ -1,5 +1,9 @@
 .secure{
     padding-bottom: 200px;
+    z-index: 9;
+    @include media(768){
+        padding-bottom: 53px;
+    }
     &__wrapper{
         max-width: 1000px;
         width: 100%;
