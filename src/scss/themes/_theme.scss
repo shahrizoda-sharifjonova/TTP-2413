@@ -18,6 +18,9 @@ body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    @include media(768){
+        background: #78B9FF;
+    }
     .main{
         flex: 1 1 auto;
     }
@@ -26,9 +29,6 @@ button{
     background: none;
     border: none;
     cursor: pointer;
-}
-ul{
-    list-style: none;
 }
 a{
     text-decoration: none;

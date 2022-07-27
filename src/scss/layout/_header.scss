@@ -1,7 +1,7 @@
 .header{
     padding-top: 30px;
     padding-bottom: 50px;
-    background: #78B9FF;
+    z-index: 1;
     @include media(768){
         padding-top: 40px;
         padding-bottom: 30px;
