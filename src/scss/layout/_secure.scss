@@ -1,0 +1,115 @@
+.secure{
+    padding-bottom: 200px;
+    &__wrapper{
+        max-width: 1000px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 50px;
+        text-align: center;
+        color: #31546D;
+        margin-bottom: 84px;
+        position: relative;
+        @include media(768){
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 50px;
+            color: #232340;
+            margin-bottom: 30px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            bottom: -34px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #879097;
+            border-radius: 24px;
+            @include media(768){
+                display: none;
+            }
+        }
+    }
+    &__img{
+        width: 100%;
+        margin-bottom: 50px;
+        img{
+            width: 100%;
+        }
+    }
+    &__content{
+        max-width: 770px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        &.mb{
+            @include media(768){
+                margin-bottom: 70px;
+            }
+        }
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #31546D;
+        padding-left: 9px;
+        padding-right: 9px;
+        @include media(768){
+            border-bottom: 1px solid #232340;
+        }
+        &:nth-of-type(2), &:nth-of-type(3){
+            padding-top: 20px;
+        }
+    }
+    &__left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 260px;
+        @include media(768){
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            max-width: 100%;
+            row-gap: 25px;
+        }
+    }
+    &__right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 385px;
+        @include media(992){
+            max-width: 320px;
+        }
+        @include media(768){
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            max-width: 100%;
+            row-gap: 25px;
+        }
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+        color: #010101;
+        @include media(768){
+            color: #fff;
+        }
+    }
+}
