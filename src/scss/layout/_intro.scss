@@ -43,6 +43,18 @@
         margin-right: auto;
         margin-bottom: 50px;
         line-height: 0;
+        &:nth-of-type(1){
+            display: block;
+            @include media(768){
+                display: none;
+            }
+        }
+        &:nth-of-type(2){
+            display: none;
+            @include media(768){
+                display: block;
+            }
+        }
         @include media(768){
             margin-bottom: 0;
         }

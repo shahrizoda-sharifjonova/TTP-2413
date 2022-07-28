@@ -58,21 +58,39 @@
     ol.meet__list{
         margin-bottom: 30px;
         margin-left: 23px;
+        @include media(768){
+            margin-left: 0;
+        }
+        li{
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7){
+                @include media(768){
+                    display: none;
+                }
+            }
+            &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10){
+                display: none;
+                @include media(768){
+                    display: block;
+                }
+            }
+        }
     }
     ul.meet__list{
         list-style: none;
-    }
-    &__li{
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
-        color: #010101;
-        @include media(768){
-            color: #FFFFFF;
-        }
-        &.disc{
+        li{
             padding-left: 27px;
             position: relative;
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7){
+                @include media(768){
+                    display: none;
+                }
+            }
+            &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10){
+                display: none;
+                @include media(768){
+                    display: block;
+                }
+            }
             &::before{
                 content: '';
                 position: absolute;
@@ -83,10 +101,23 @@
                 top: 50%;
                 transform: translate(-50%);
                 left: 12px;
+                @include media(992){
+                    top: 15px;
+                    transform: translateY(0);
+                }
                 @include media(768){
                     background: #fff;
                 }
             }
+        }
+    }
+    &__li{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        color: #010101;
+        @include media(768){
+            color: #FFFFFF;
         }
     }
 }

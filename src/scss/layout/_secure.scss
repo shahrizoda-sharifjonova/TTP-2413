@@ -1,8 +1,7 @@
 .secure{
     padding-bottom: 200px;
-    z-index: 9;
     @include media(768){
-        padding-bottom: 53px;
+        padding-bottom: 70px;
     }
     &__wrapper{
         max-width: 1000px;
@@ -16,25 +15,25 @@
         line-height: 50px;
         text-align: center;
         color: #31546D;
-        margin-bottom: 84px;
         position: relative;
+        margin-bottom: 84px;
         @include media(768){
             font-weight: 400;
             font-size: 20px;
             line-height: 50px;
-            color: #232340;
             margin-bottom: 30px;
+            color: #232340;
         }
         &::before{
             content: '';
             position: absolute;
+            background: #879097;
+            border-radius: 24px;
             width: 80px;
             height: 4px;
             bottom: -34px;
             left: 50%;
             transform: translateX(-50%);
-            background: #879097;
-            border-radius: 24px;
             @include media(768){
                 display: none;
             }
@@ -43,77 +42,82 @@
     &__img{
         width: 100%;
         margin-bottom: 50px;
+        @include media(768){
+            display: none;
+        }
         img{
             width: 100%;
         }
     }
-    &__content{
-        max-width: 770px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        &.mb{
-            @include media(768){
-                margin-bottom: 70px;
+    &__table{
+        display: none;
+        &:nth-of-type(2), &:nth-of-type(3){
+            td{
+                &:nth-of-type(3){
+                    text-align: left;
+                }
+                min-width: max-content;
+                width: max-content;
+                @include media(425){
+                    width: 50%;
+                }
+            }
+        }
+        @include media(768){
+            display: block;
+        }
+        tr{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap !important;
+            td{
+                min-width: 50% !important;
+                width: 50% !important;
+                &:nth-of-type(2){
+                    text-align: right !important;
+                }
             }
         }
     }
-    &__item{
+    table{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 755px;
+        &:nth-of-type(1){
+            @include media(768){
+                display: none;
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 50px;
+        }
+    }
+    tbody{
+        width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    tr{
+        width: 100%;
+        padding-bottom: 10px;
         border-bottom: 1px solid #31546D;
-        padding-left: 9px;
-        padding-right: 9px;
-        @include media(768){
-            border-bottom: 1px solid #232340;
-        }
         &:nth-of-type(2), &:nth-of-type(3){
-            padding-top: 20px;
+            padding-top: 10px;
         }
     }
-    &__left{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 260px;
-        @include media(768){
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            max-width: 100%;
-            row-gap: 25px;
-        }
-    }
-    &__right{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 385px;
-        @include media(992){
-            max-width: 320px;
-        }
-        @include media(768){
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-end;
-            max-width: 100%;
-            row-gap: 25px;
-        }
-    }
-    &__p{
+    td{
         font-weight: 300;
         font-size: 18px;
-        line-height: 18px;
+        line-height: 49px;
         color: #010101;
+        width: 190px;
         @include media(768){
-            color: #fff;
+            color: #FFFFFF;
+        }
+        &:last-of-type{
+            text-align: right;
         }
     }
 }
